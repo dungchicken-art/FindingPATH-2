@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pathfinding Visualizer - Khương Đình</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha512-sA+e2LTDmT6F4gRBVgpqh+apMI2vlA38nSxr2idKdvUSsfx8bVsgcF6edS5tGXm5x5G72XdXdx0P2U5p2G6z7g=="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <aside class="sidebar">
+        <h1>Finding PATH - Khương Đình</h1>
+        <div class="status-block">
+          <p><strong>Start:</strong> <span id="start-node">chưa chọn</span></p>
+          <p><strong>Goal:</strong> <span id="goal-node">chưa chọn</span></p>
+          <p class="message" id="status-message">Click vào một nút để đặt Start, click nút tiếp theo để đặt Goal.</p>
+        </div>
+        <div class="controls">
+          <button data-algo="dfs">Run DFS</button>
+          <button data-algo="bfs">Run BFS</button>
+          <button data-algo="dijkstra">Run Dijkstra</button>
+          <button data-algo="astar">Run A*</button>
+        </div>
+        <label class="slider-label" for="speed">Tốc độ animation (ms): <span id="speed-value">150</span></label>
+        <input type="range" id="speed" min="50" max="300" value="150" />
+        <div class="secondary-controls">
+          <button id="clear-selection" class="ghost">Reset lựa chọn</button>
+        </div>
+        <div class="legend">
+          <h2>Chú thích</h2>
+          <ul>
+            <li><span class="legend-swatch normal"></span>Đường bình thường</li>
+            <li><span class="legend-swatch flooded"></span>Đường ngập (trọng số ×10)</li>
+            <li><span class="legend-swatch blocked"></span>Đường tắc (trọng số ×50)</li>
+            <li><span class="legend-swatch current"></span>Node đang xét</li>
+            <li><span class="legend-swatch visited"></span>Node đã duyệt</li>
+            <li><span class="legend-swatch frontier"></span>Frontier / Open set</li>
+            <li><span class="legend-swatch path"></span>Đường kết quả</li>
+          </ul>
+        </div>
+        <p class="hint">
+          Các cạnh được tạo mẫu từ khu vực Khương Đình. Bạn có thể thay thế file
+          <code>backend/khuong_dinh.graphml</code> bằng dữ liệu OSMnx thực tế để trực quan hóa bản đồ thật.
+        </p>
+      </aside>
+      <div id="map"></div>
+    </div>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha512-vA3Z8J9+AeTfG6ZbkADVY6jwxKF1uHmIiMaivGi99Z0eKCbFf8HgnbZQzQ0imeISFRCGDAPk38LomPvKg3r3aQ=="
+      crossorigin=""
+    ></script>
+    <script src="map.js"></script>
+  </body>
+</html>

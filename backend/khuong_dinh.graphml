@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d0" for="node" attr.name="x" attr.type="double"/>
+  <key id="d1" for="node" attr.name="y" attr.type="double"/>
+  <key id="d2" for="edge" attr.name="length" attr.type="double"/>
+  <key id="d3" for="edge" attr.name="flooded" attr.type="boolean"/>
+  <key id="d4" for="edge" attr.name="blocked" attr.type="boolean"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="1">
+      <data key="d0">105.815</data>
+      <data key="d1">20.994</data>
+    </node>
+    <node id="2">
+      <data key="d0">105.817</data>
+      <data key="d1">20.995</data>
+    </node>
+    <node id="3">
+      <data key="d0">105.8185</data>
+      <data key="d1">20.996</data>
+    </node>
+    <node id="4">
+      <data key="d0">105.8155</data>
+      <data key="d1">20.997</data>
+    </node>
+    <node id="5">
+      <data key="d0">105.8175</data>
+      <data key="d1">20.998</data>
+    </node>
+    <node id="6">
+      <data key="d0">105.819</data>
+      <data key="d1">20.999</data>
+    </node>
+    <edge id="e0" source="1" target="2">
+      <data key="d2">180</data>
+      <data key="d3">false</data>
+      <data key="d4">false</data>
+    </edge>
+    <edge id="e1" source="2" target="3">
+      <data key="d2">200</data>
+      <data key="d3">true</data>
+      <data key="d4">false</data>
+    </edge>
+    <edge id="e2" source="3" target="6">
+      <data key="d2">250</data>
+      <data key="d3">false</data>
+      <data key="d4">false</data>
+    </edge>
+    <edge id="e3" source="1" target="4">
+      <data key="d2">220</data>
+      <data key="d3">false</data>
+      <data key="d4">false</data>
+    </edge>
+    <edge id="e4" source="4" target="5">
+      <data key="d2">210</data>
+      <data key="d3">false</data>
+      <data key="d4">true</data>
+    </edge>
+    <edge id="e5" source="5" target="6">
+      <data key="d2">190</data>
+      <data key="d3">false</data>
+      <data key="d4">false</data>
+    </edge>
+    <edge id="e6" source="2" target="5">
+      <data key="d2">170</data>
+      <data key="d3">false</data>
+      <data key="d4">false</data>
+    </edge>
+    <edge id="e7" source="3" target="5">
+      <data key="d2">160</data>
+      <data key="d3">false</data>
+      <data key="d4">false</data>
+    </edge>
+    <edge id="e8" source="4" target="2">
+      <data key="d2">150</data>
+      <data key="d3">false</data>
+      <data key="d4">false</data>
+    </edge>
+  </graph>
+</graphml>
